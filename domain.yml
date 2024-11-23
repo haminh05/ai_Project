@@ -1,0 +1,61 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - nlu_fallback
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Xin chào, tôi giúp gì được cho bạn?"
+
+  utter_cheer_up1:
+    - text: "Thứ này có thể giúp bạn vui lên:"
+      custom:
+        type: "video"
+        link: "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+
+  utter_cheer_up2:
+    - text: "Vậy cái này thì sao:"
+      custom:
+        type: "video"
+        link: "https://www.youtube.com/watch?v=KCzq4aa0wbw"
+
+  utter_cheer_up3:
+    - text: "Tôi nghĩ bạn nên đi dạo cho khuây khoả đầu óc."
+      image: "https://i.pinimg.com/736x/b1/8f/8a/b18f8a3c611b2b847846863ee841bb32.jpg" # Đường dẫn phải là URL hợp lệ
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+    - text: "Bạn đỡ hơn chưa?"
+    - text: "Bạn vui hơn chưa?"
+    - text: "Tâm trạng bạn tốt hơn chưa?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Tạm biệt, hẹn gặp lại"
+    - text: "Byebye"
+    - text: "Tạm biệt"
+    - text: "See you later"
+
+  utter_iamabot:
+    - text: "I am FLORENTINO, UI 1 TÌNH HUỐNG MÚA PHẢI NÓI LÀ CỰC GẮT."
+
+  utter_default:
+    - text: "Tôi không hiểu, vui lòng giải thích lại!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_default_fallback
